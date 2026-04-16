@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Grade Letter Calculator";
+}
+
+<h2>Grade Letter Calculator</h2>
+
+<form asp-action="GradeLetter" method="post">
+    <label>Enter Grade:</label>
+    <input type="number" name="grade" required />
+    <button type="submit">Get Letter</button>
+</form>
+
+@if (ViewBag.Letter != null)
+{
+    <h3>The letter is @ViewBag.Letter</h3>
+}
